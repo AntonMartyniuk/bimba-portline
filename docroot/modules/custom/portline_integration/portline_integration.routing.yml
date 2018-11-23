@@ -1,0 +1,64 @@
+#portline_integration.add_to_cart:
+#  path: /cart/add
+#  defaults:
+#    _controller: \Drupal\portline_integration\Controller\PortlineCartController::addItem
+#  requirements:
+#    _access: 'TRUE'
+#
+#portline_integration.get_cart_quantity:
+#  path: /cart/quantity
+#  defaults:
+#    _controller: \Drupal\portline_integration\Controller\PortlineCartController::get_cart_quantity
+#  requirements:
+#    _access: 'TRUE'
+#
+#portline_integration.cart_page:
+#  path: /DotNet2CF/SSOCart.aspx
+#  defaults:
+#    _controller: \Drupal\portline_integration\Controller\PortlineCartController::cartUrl
+#  requirements:
+#      _permission: 'access content'
+#
+##portline_integration.add_item_page:
+##  path: /ebimba/item.cfm
+##  defaults:
+##    _controller: \Drupal\portline_integration\Controller\PortlineCartController::addItemUrl
+##  requirements:
+##      _access: 'TRUE'
+#
+#portline_integration.account_info:
+#  path: /DotNet2CF/SSOAccount.aspx
+#  defaults:
+#    _controller: \Drupal\portline_integration\Controller\PortlineCartController::accountUrl
+#  requirements:
+#    _access: 'TRUE'
+#
+#
+#portline_integration.user_info:
+#  path: /price-and-delivery
+#  defaults:
+#    _controller: \Drupal\portline_integration\Controller\PortlineCartController::priceAndDeliveryUrl
+#  requirements:
+#      _access: 'TRUE'
+
+my_cart:
+  path: /Shopping-Cart-Container/Shopping-Cart-Sub-Container/Shopping-Cart
+  defaults:
+    _controller: \Drupal\portline_integration\Controller\PortlineCartController::myCart
+  requirements:
+    _access: 'TRUE'
+price_and_delivery:
+  path: /Support/Commercial-Support/Price-And-Delivery
+  defaults:
+    _controller: \Drupal\portline_integration\Controller\PortlineCartController::priceAndDelivery
+  requirements:
+    _access: 'TRUE'
+add_to_cart:
+  path: /Shopping-Cart-Container/Shopping-Cart-Sub-Container/Shopping-Cart/Add-To-Cart
+  defaults:
+    _form: \Drupal\portline_integration\Form\PortlineAddToCart
+    _title: 'Shopping Cart'
+  requirements:
+    _access: 'TRUE'
+
+

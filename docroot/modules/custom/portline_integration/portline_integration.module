@@ -1,0 +1,27 @@
+<?php
+
+use Drupal\portline_integration\Controller\PortlineCartController as Portline;
+
+function portline_integration_user_logout($account) {
+//    $portline = new Portline();
+//    $portline->disassociate_user_from_ssid();
+}
+
+/**
+ * Implements hook_theme().
+ */
+function portline_integration_theme($existing, $type, $theme, $path) {
+  $theme = [];
+  $theme['iframe_cart_table'] = [
+    'path' => drupal_get_path('module', 'portline_integration') . '/templates',
+    'variables' => ['ssid' => NULL, 'iframe_cart_url' => NULL],
+    'template' => 'portline-iframe-cart-table'
+  ];
+  $theme['iframe_cart_price_and_delivery'] = [
+    'path' => drupal_get_path('module', 'portline_integration') . '/templates',
+    'variables' => ['ssid' => NULL, 'iframe_cart_url' => NULL],
+    'template' => 'portline-iframe-cart-price-and-delivery'
+  ];
+
+  return $theme;
+}

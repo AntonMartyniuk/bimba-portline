@@ -1,0 +1,6 @@
+name: Portline Integration Module
+description: Handle portline sso and cart
+package: Custom
+
+type: module
+core: 8.x
